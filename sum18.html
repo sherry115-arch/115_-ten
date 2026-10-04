@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FBFAF6">
+<meta name="description" content="適合國小低年級的合10到合18數字拖曳遊戲，支援點選、成功音效與動畫。">
+<title>太空水彩版・合18・數字小舞台｜小小數學宇宙</title>
+<link rel="icon" type="image/svg+xml" href="assets/astronaut.svg">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/watercolor.css">
+<script defer src="assets/math.js"></script>
+<script defer src="assets/app.js"></script>
+</head>
+<body data-target="18" style="--accent:#6D6D9D;--soft:#E9E9F6">
+<a class="skip-link" href="#main">跳到主要內容</a>
+<div class="shell">
+<header class="topbar">
+<a href="index.html" class="brand" aria-label="小小數學宇宙，回首頁"><span class="brand-mark" aria-hidden="true">✦</span>小小數學宇宙</a>
+<div class="toolbar" aria-label="學習設定"><button id="sound-toggle" class="pill" type="button" aria-pressed="true">♪ 音效開</button><button id="font-toggle" class="pill" type="button" aria-label="切換字體大小">字體：標準</button></div>
+</header>
+<noscript><p class="no-js">請在瀏覽器中開啟 JavaScript，才能拖曳數字、計算答案與播放音效。</p></noscript>
+<nav class="level-nav" aria-label="選擇練習目標"><a class="home-link" href="index.html">⌂ 首頁</a><a href="sum10.html">合10</a><a href="sum11.html">合11</a><a href="sum12.html">合12</a><a href="sum13.html">合13</a><a href="sum14.html">合14</a><a href="sum15.html">合15</a><a href="sum16.html">合16</a><a href="sum17.html">合17</a><a href="sum18.html" aria-current="page">合18</a></nav><main id="main">
+<section class="practice-heading" aria-labelledby="practice-title">
+<div><p class="eyebrow">數字小舞台 / 09</p><h1 id="practice-title">一起合成 <span>18</span>！</h1><p>選數字進舞台，加起來剛好是 18 就過關。</p></div>
+<div class="star-pocket"><div id="score-stars" class="stars" aria-hidden="true">☆☆☆☆☆</div><p id="score">已收集 0 顆星</p></div>
+</section>
+<div class="play-layout"><aside class="bank" aria-label="左邊數字站"><h2>左邊數字站</h2><p>拖一拖，或點一下</p><div class="bank-grid"><button type="button" class="number-card" data-card-id="0" data-value="0" aria-label="0，第1組，加入舞台">0</button><button type="button" class="number-card" data-card-id="1" data-value="1" aria-label="1，第1組，加入舞台">1</button><button type="button" class="number-card" data-card-id="2" data-value="2" aria-label="2，第1組，加入舞台">2</button><button type="button" class="number-card" data-card-id="3" data-value="3" aria-label="3，第1組，加入舞台">3</button><button type="button" class="number-card" data-card-id="4" data-value="4" aria-label="4，第1組，加入舞台">4</button><button type="button" class="number-card" data-card-id="5" data-value="5" aria-label="5，第1組，加入舞台">5</button><button type="button" class="number-card" data-card-id="6" data-value="6" aria-label="6，第1組，加入舞台">6</button><button type="button" class="number-card" data-card-id="7" data-value="7" aria-label="7，第1組，加入舞台">7</button><button type="button" class="number-card" data-card-id="8" data-value="8" aria-label="8，第1組，加入舞台">8</button><button type="button" class="number-card" data-card-id="9" data-value="9" aria-label="9，第1組，加入舞台">9</button></div></aside>
+<section class="stage-panel" aria-label="合18練習舞台">
+<div class="stage" id="drop-zone" data-state="empty" role="region" aria-label="數字舞台，目標18">
+<div class="target">今天的目標 <strong>18</strong></div>
+<div class="empty-stage" id="empty-stage"><div class="empty-shapes" aria-hidden="true"><span>？</span><b>＋</b><span>？</span></div><p>讓數字站上這裡！</p></div>
+<div id="stage-cards" class="stage-cards" role="group" aria-label="舞台上的數字，點選可取回"></div>
+<p class="equation" id="equation">？ ＋ ？ ＝ 18</p>
+<div id="success-badge" class="success-badge" hidden>★ 任務成功 ＋1</div>
+<p class="stage-total">目前合計 <strong id="current-total">0</strong> ／ 目標 18</p>
+<p class="stage-caption" id="stage-caption">點舞台上的數字，就能取回。</p>
+</div>
+<div id="feedback" class="feedback" data-state="empty" role="status" aria-live="polite" aria-atomic="true"><img class="feedback-mascot" src="assets/astronauts-watercolor.png" alt="" width="64" height="64"><div><h2 id="feedback-title">準備好了嗎？</h2><p id="feedback-detail">拖數字進舞台，也可以直接點一下。</p></div></div>
+<div class="actions"><button id="undo" type="button" class="btn secondary" disabled>↶ 退回一張</button><button id="clear-stage" type="button" class="btn secondary" disabled>重新排</button><button id="next-round" type="button" class="btn primary" hidden>再挑戰一次 →</button></div>
+</section><aside class="bank right" aria-label="右邊數字站"><h2>右邊數字站</h2><p>拖一拖，或點一下</p><div class="bank-grid"><button type="button" class="number-card" data-card-id="10" data-value="0" aria-label="0，第2組，加入舞台">0</button><button type="button" class="number-card" data-card-id="11" data-value="1" aria-label="1，第2組，加入舞台">1</button><button type="button" class="number-card" data-card-id="12" data-value="2" aria-label="2，第2組，加入舞台">2</button><button type="button" class="number-card" data-card-id="13" data-value="3" aria-label="3，第2組，加入舞台">3</button><button type="button" class="number-card" data-card-id="14" data-value="4" aria-label="4，第2組，加入舞台">4</button><button type="button" class="number-card" data-card-id="15" data-value="5" aria-label="5，第2組，加入舞台">5</button><button type="button" class="number-card" data-card-id="16" data-value="6" aria-label="6，第2組，加入舞台">6</button><button type="button" class="number-card" data-card-id="17" data-value="7" aria-label="7，第2組，加入舞台">7</button><button type="button" class="number-card" data-card-id="18" data-value="8" aria-label="8，第2組，加入舞台">8</button><button type="button" class="number-card" data-card-id="19" data-value="9" aria-label="9，第2組，加入舞台">9</button></div></aside></div>
+<aside class="learning-note"><img src="assets/astronauts-watercolor.png" alt="" width="63" height="56"><p><strong>小太空人提醒</strong><br>左右各有 0～9，每個數字可以用兩次。<br>可以用兩張，也可以用更多張，一起找出不同的組合！</p></aside>
+<nav class="page-turn" aria-label="上一個與下一個練習"><a href="sum17.html">← 合17</a><a href="index.html">回首頁 →</a></nav></main><div class="confetti" id="confetti" aria-hidden="true"></div><footer class="footer">慢慢想，多試試。每一種組合，都是新的發現。<br>太空水彩小樂園 · 合10～合18</footer>
+</div></body></html>
